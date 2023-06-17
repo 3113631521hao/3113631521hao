@@ -1,0 +1,47 @@
+.box{
+    position: relative;
+    width: 380px;
+    height: 500px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 20px;
+    display: flex;
+    left: 35%;
+    margin-top: 8%;
+    justify-content: center;
+    align-items: center;
+}
+.box h2{
+    color: white;
+    font-size: 4em;
+    text-shadow: 2px 2px pink;
+    z-index: 1;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    width: 240%;
+    height: 130%;
+    background:
+            linear-gradient(#00ccff,#d500f9);
+}
+.box::after{
+    content: "";
+    position: absolute;
+    background:#0e1538;
+    inset: 20px;
+    border-radius: 20px;
+}
+.box::before{
+    animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.box{
+    overflow: hidden;
+}
